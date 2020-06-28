@@ -1,0 +1,7 @@
+groups:
+  - name: Node Uptime
+    rules:
+      - record: job:uptime:nodes
+        expr: avg(up {job="tc_kube_nodes"})
+      - alert: OneOrMoreNodesDown
+        expr: job:uptime:nodes < 1
