@@ -36,6 +36,5 @@ scrape_configs:
       - source_labels: [__meta_ec2_tag_monitor]
         regex: prometheus
         action: keep
-
       - source_labels: [__meta_ec2_instance_id]
         target_label: instance
