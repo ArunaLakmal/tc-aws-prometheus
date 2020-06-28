@@ -1,4 +1,4 @@
-# Setting Up Prometheus/Node Exporter on AWS Instance and Service Auto Discovery using Tags
+# Setting Up Prometheus/Node Exporter on AWS Instance and EC2 Service Auto Discovery using Tags
 
 Prometheus 2.7.1 will be installed and enable service auto discovery for the newly deployed instances. Also, Node Exporter 0.17.0 is used on the AWS instances to export the Node Matrices. 
 
