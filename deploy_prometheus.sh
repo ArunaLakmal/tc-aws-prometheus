@@ -11,11 +11,10 @@ sudo cp Prometheus/prometheus.service /etc/systemd/system/prometheus.service
 #Download Prometheus and setting up
 wget https://github.com/prometheus/prometheus/releases/download/v2.7.1/prometheus-2.7.1.linux-amd64.tar.gz
 tar -xvf prometheus-2.7.1.linux-amd64.tar.gz
-cd prometheus-2.7.1.linux-amd64
-sudo mv console* /etc/prometheus
+sudo mv prometheus-2.7.1.linux-amd64/console* /etc/prometheus
 sudo chown -R prometheus:prometheus /etc/prometheus
-sudo mv prometheus /usr/local/bin/
-sudo mv promtool /usr/local/bin/
+sudo mv prometheus-2.7.1.linux-amd64/prometheus /usr/local/bin/
+sudo mv prometheus-2.7.1.linux-amd64/promtool /usr/local/bin/
 sudo chown prometheus:prometheus /usr/local/bin/prometheus
 sudo chown prometheus:prometheus /usr/local/bin/promtool
 
