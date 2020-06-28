@@ -5,3 +5,4 @@ groups:
         expr: avg(up {job="tc_kube_nodes"})
       - alert: OneOrMoreNodesDown
         expr: job:uptime:nodes < 1
+        for: 2m
