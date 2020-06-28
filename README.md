@@ -31,3 +31,5 @@ Below Job is configured to discover the EC2 instances
 `__meta_ec2_tag_monitor` - label is used to identify the `monitor` tag  in the EC2 instances with the  value `prometheus`.
 
 `__meta_ec2_instance_id` - pass the instance id as the `instance` label.
+
+More information about the Prometheus Service Discovery configuration can be found [here](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config).
