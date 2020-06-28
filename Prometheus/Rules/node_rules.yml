@@ -6,3 +6,5 @@ groups:
       - alert: OneOrMoreNodesDown
         expr: job:uptime:nodes < 1
         for: 2m
+        annotations:
+          overview: '{{printf "%.2f" $value}}% nodes are up for {{ $labels.job }}'
