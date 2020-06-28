@@ -33,3 +33,16 @@ Below Job is configured to discover the EC2 instances
 `__meta_ec2_instance_id` - pass the instance id as the `instance` label.
 
 More information about the Prometheus Service Discovery configuration can be found [here](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config).
+
+## Prometheus Rules
+
+Node rules were added to check the average uptime of the nodes and, average uptime should be equal to 1. If it is less than to 1 it will start "firing" the alert
+
+Here is the Average Node Uptime Rule:
+
+```
+      - record: job:uptime:nodes
+        expr: avg(up {job="tc_kube_nodes"})
+      - alert: OneOrMoreNodesDown
+        expr: job:uptime:nodes < 1
+```
