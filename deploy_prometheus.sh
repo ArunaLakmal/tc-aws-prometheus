@@ -5,9 +5,9 @@ sudo useradd --no-create-home --shell /bin/false prometheus
 sudo mkdir /etc/prometheus
 sudo mkdir /var/lib/prometheus
 sudo chown prometheus:prometheus /var/lib/prometheus
-sudo mv Prometheus/prometheus.yml /etc/prometheus
-sudo cp Prometheus/prometheus.service /etc/systemd/system/prometheus.service
-sudo cp Prometheus/Rules/node_rules.yml /etc/prometheus
+sudo mv tc-aws-prometheus/Prometheus/prometheus.yml /etc/prometheus
+sudo cp tc-aws-prometheus/Prometheus/prometheus.service /etc/systemd/system/prometheus.service
+sudo cp tc-aws-prometheus/Prometheus/Rules/node_rules.yml /etc/prometheus
 
 #Download Prometheus and setting up
 wget https://github.com/prometheus/prometheus/releases/download/v2.7.1/prometheus-2.7.1.linux-amd64.tar.gz
